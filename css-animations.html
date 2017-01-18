@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="animation-submarine.html">
+
+<!--
+`css-animations`
+CSS animated &#34;images&#34;
+
+@demo demo/index.html
+-->
+
+<dom-module id="css-animations">
+  <template>
+    <template is="dom-if" if="[[submarine]]">
+      <animation-submarine></animation-submarine>
+    </template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'css-animations',
+
+      properties: {
+        submarine: {
+          type: Boolean,
+          value: false,
+        },
+      },
+
+    });
+  </script>
+</dom-module>
